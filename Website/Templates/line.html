@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SUMMER OYLMPICS</title>
+    <meta charset="UTF-8"> 
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Men', 'Women'],
+
+            ['1964',  506,120],
+         ['1968',  458, 150],
+        ['1972',  789, 180],
+        ['1976',  1506, 300],
+        ['1980',  1033, 650],
+        ['1984',  1100, 750]
+         //['1988',  1189, 900],
+       //  ['1992',  1250, 950],
+        //  ['1996',  1288, 320],
+        // ['2000',  1360, 800]
+        // ['2004',  1380, 869],
+        // ['2008',  1376, 900]
+        // ['2012',  1400, 950],
+        // ['2016',  1380, 940]
+       ]);
+
+        var options = {
+          title: 'Total participants in each gender by different year',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static '/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"​>
+	<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}"​>
+<!--===============================================================================================-->
+</head>
+<body>
+	<div class="container-table100">
+        <div class="container-table100">
+            <div >
+                <img src="{% static "images/olympic.jpg" %}" alt="Symbol" style=" width:200px;height:125px;">
+            </div>
+                                                                                                                                <div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div>
+            <div>
+                <h1 style="font-weight: bold; color: black; "> Summer Olypmics</h1>
+            </div>
+        <table>
+            <th><a href="/Website/table"> Home </a></th>
+            <th> <a href="/Website/bar"> Column Chart </a></th>
+            <th> <a href="/Website/line"> Line Chart </a></th>
+            <th> <a href="/Website/pie"> Pie Chart </a></th>
+        </table>
+        <div class="wrap-table100">
+            
+         <div><h1 style="color:black;">Line Chart</h1><br/></div>
+         
+         <div id="curve_chart" style="width: 900px; height: 500px"></div>
+        </div>
+        </div>
+	
+
+<!--===============================================================================================-->	
+	<script src="{% static '/js/main.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static '/js/main.js' %}"></script>
+	<script src="{% static '/js/main.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static '/js/main.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static '/js/main.js' %}​"></script>
+
+</body>
+</html>

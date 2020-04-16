@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SUMMER OYLMPICS</title>
+    <meta charset="UTF-8"> 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Sport', 'Men', 'Women'],
+          ['Aquatics',400, 172],
+          ['Archery', 218, 122],
+          ['Athletics',120, 80],
+          ['Badminton', 500, 230],
+          ['Basketball',612, 423],
+          ['Baseball',42, 15],
+          ['Cricket',352, 123],
+          ['Cycling',51, 16],
+          ['Football',115, 90],
+          ['Golf',75, 30],
+          ['Gymnastics',56, 90],
+          ['Handball',88, 62],
+          ['Hockey',366, 136],
+          ['Judo',36, 10],
+          ['Polo',66, 23],
+          ['Shooting',40, 30],
+          ['Swimming',61, 36],
+          ['Tennis',450, 360],
+          ['Wrestling',120, 80]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Total Medals won by each gender in various category',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static '/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"​>
+	<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}"​>
+<!--===============================================================================================-->
+</head>
+<body>
+	<div class="container-table100">
+        <div class="container-table100">
+            <div >
+                <img src="{% static "images/olympic.jpg" %}" alt="Symbol" style=" width:200px;height:125px;">
+            </div>
+                                                                                                                                <div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div>
+            <div>
+                <h1 style="font-weight: bold; color: black; "> Summer Olypmics</h1>
+            </div>
+        <table>
+            <th><a href="/Website/table"> Home </a></th>
+            <th> <a href="/Website/bar"> Column Chart </a></th>
+            <th> <a href="/Website/line"> Line Chart </a></th>
+            <th> <a href="/Website/pie"> Pie Chart </a></th>
+        </table>
+        <div class="wrap-table100">
+            
+         <div><h1 style="color: black;">Column Chart</h1><br/></div>
+            <div id="columnchart_material" style="width: 800px; height: 500px;"></div>
+           
+        </div>
+        </div>
+	
+
+<!--===============================================================================================-->	
+	<script src="{% static '/js/main.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static '/js/main.js' %}"></script>
+	<script src="{% static '/js/main.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static '/js/main.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static '/js/main.js' %}​"></script>
+
+</body>
+</html>
